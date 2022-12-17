@@ -1,0 +1,46 @@
+/*设置benner*/
+main .main_banner{
+    display: flex;
+}
+
+.main_banner .bannerbg{
+   
+    height: 75vh;
+}
+main .main_banner img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  
+}
+/*背景遮罩*/
+.main_banner .warp-mask {
+    position:absolute;
+    height:75vh;
+    width:100%;
+    background: rgba(14, 14, 14, 0.3);
+
+}
+/*介绍标题*/
+.introduce {
+    width: 50%;
+    top: 160px;
+    position:absolute;
+    margin-left: 20%;
+}
+
+.introduce h2{
+    font-size: 2.25vw;
+    color: rgb(255, 255, 255);
+    font-family: '马克笔';
+    font-weight: 1;
+}
+
+.content {
+    margin-top: 5%;
+    font-size: 1.25vw;
+    font-family: '幼圆';
+    color: #fff;
+    letter-spacing: var(--nav-menu-letter-spacing);
+    text-indent: 2em;
+}

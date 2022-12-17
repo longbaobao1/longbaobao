@@ -43,12 +43,27 @@
     margin-right: 18%;
 }
 
-.pvwork h2{
-    font-size: 2rem;
-    font-family: '标题圆';
+.topic {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #000;
+    
 }
 
+.pvwork h2{
+    font-size: clamp(1.25rem, 2vw, 3rem);
+    font-family: '标题圆'; 
+    font-weight: 1;
+}
+
+.topic img{
+    
+    margin-left: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
 
 .module-pv {
     width: 100%;

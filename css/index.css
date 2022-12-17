@@ -251,7 +251,79 @@ main .main_div img{
     text-indent: 2em;
 }
 
-.music {
+.team {
+    margin: auto;
+    margin-top: 20%;
+    font-size: 2rem;
+    color: rgb(240, 240, 240);
+    font-family: '黑体';
+}
+.team .avatar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-flow: row wrap;
+}
+.team .avatar a{
+    display: flex;
+    flex: 0 0 20%;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.team .avatar span{
+    margin: 0 auto;
+    margin-left: 15px;
+    font-family: '幼圆';
+    font-size: 1.25rem
+}
+.team .avatar img{
+    
+    width: 40px;
+    border-radius: 50%;
+    align-items: center;
+}
+@media (max-width:768px) {
+    .team {
+        margin: auto;
+        margin-top: 10%;
+        font-size: 1rem;
+        font-family: '马克笔';
+    }
+    .team .avatar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-flow: row wrap;
+    }
+    .team .avatar a{
+        display: flex;
+        flex: 0 0 20%;
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .team .avatar span{
+        margin: 0 auto;
+        margin-left: 5px;
+        font-family: '幼圆';
+        font-size: 0.25rem;
+    }
+    .team .avatar img{
+        
+        width: 25px;
+        border-radius: 50%;
+        align-items: center;
+    }
+}
+/*——————————————作品展示——————————————————————*/
+.music, .tutorial{
     margin: auto;
     margin-top: 5%;
     margin-left: 15%;
@@ -260,14 +332,14 @@ main .main_div img{
     user-select: none;
 }
 
-.music .column{
+.column{
     border-bottom: 1px solid #000;
 }
 
-.music .column h2{
+.column h2{
     width: 100%;
     border-bottom: 2px #000;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: '标题圆';
     font-weight: 1;
     letter-spacing: var(--nav-menu-letter-spacing);
@@ -447,6 +519,13 @@ main .main_div img{
     }
 }
 
+/*————————————————————————————————教程板块——————————————*/
+
+
+
+
+
+
 
 /*-------------------页脚部分------------------------*/
 .container2{
@@ -497,6 +576,7 @@ main .main_div img{
 .email-icon {
     line-height: 100%;
     font-size: large;
+    cursor: pointer;
 }
 
 .e-mail .email-account {
