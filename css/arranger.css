@@ -1,0 +1,25 @@
+.arrwork {
+    margin: auto;
+    margin-top: 4%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.arrwork h2{
+    font-size: 2rem;
+    font-family: '标题圆';
+    border-bottom: 1px solid #000;
+}
+
+.arrplayer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrplayer iframe {
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom: 5%;
+}

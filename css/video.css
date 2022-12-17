@@ -1,0 +1,74 @@
+.coverbanner {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coverbanner img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.synopsis {
+    width: 50%;
+    margin-top: 10%;
+    position: absolute;
+    font-size: 1rem;
+    font-family: '黑体';
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px #000;
+}
+
+.warp-mask {
+    position:absolute;
+    height:600px;
+    width:100%;
+    background: rgba(14, 14, 14, 0.2);
+}
+
+.coverbanner .title {
+    position: absolute;
+    font-size: 4rem;
+    color: rgb(201, 154, 255);
+    font-family: '小兔';
+    text-shadow: 5px 5px 10px #000;
+}
+
+.pvwork {
+    margin: auto;
+    margin-top: 4%;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.pvwork h2{
+    font-size: 2rem;
+    font-family: '标题圆';
+    border-bottom: 1px solid #000;
+}
+
+
+.module-pv {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 1%;
+}
+
+.module-pv .player {
+    display: flex;
+    margin: auto;
+    margin-bottom: 5%;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.player iframe {
+    flex: 0 0 40%;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right:5%;
+}
+

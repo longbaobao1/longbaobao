@@ -1,0 +1,565 @@
+/*引入字体包*/
+@font-face {
+    font-family: '酷黑';
+    src: url(./font/ZCOOL_KuHei_Regular.ttf);
+}
+
+@font-face {
+    font-family: '斗鱼追光';
+    src:url(./font/douyuFont-2.otf);
+}
+
+@font-face {
+    font-family: '小兔';
+    src:url(./font/QianTuXiaoTuTi-2.ttf);
+}
+
+@font-face {
+    font-family: '标题圆';
+    src:url(./font/YouSheBiaoTiYuan-2.otf);
+}
+@font-face {
+    font-family: '马克笔';
+    src:url(./font/nishiki-teki-2.ttf);
+}
+
+:root {
+    --nav-bg-color: rgba(65, 65, 65, 0.8);
+    --nav-text-color: #fff;
+    --nav-menu-letter-spacing: 2px;
+    --nav-text-hover-color:rgba(243, 243, 243, 0.8);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*
+/* 状态一: 未被访问过的链接
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 状态二: 已经访问过的链接 
+a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+/* 状态三: 鼠标划过(停留)的链接(默认红色) 
+a:hover {
+    text-decoration: none;
+    color: rgb(223, 223, 223);
+}
+/* 状态四: 被点击的链接 
+a:active {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+*/
+
+/*页面滚动条隐藏*/
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.container {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--nav-bg-color);
+    position: fixed;
+    top: 0;
+    z-index:9999;/*将导航栏悬浮于最上层*/
+}
+
+/*导航栏内容设置*/
+.container .nav {
+    height: 100%;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/*导航栏左侧*/
+.nav .nav-logo {
+    cursor: pointer;
+   
+}
+
+.nav .nav-logo .logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-logo .logo span{
+    display: flex;
+    margin: 0 1rem;
+    font-size: 1.35rem;
+    font-family: '标题圆';
+    color: var(--nav-text-color);
+    letter-spacing: var(--nav-menu-letter-spacing);
+    opacity: 1;
+    
+}
+
+/*导航栏右侧*/
+.nav .nav-menu {
+    display: none;
+}
+
+.nav .nav-menu .title a {
+    color: var(--nav-text-hover-color);
+}
+
+@media(min-width: 768px) {
+
+    .nav .nav-menu {
+        display: flex;
+    }
+
+    .nav .nav-menu .title{
+        font-family: '标题圆';
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav .nav-menu .title li{
+        color: #fff;
+        font-size: 1.25rem;
+        margin: 0 2rem;
+        cursor: pointer;
+        letter-spacing: var(--nav-menu-letter-spacing);
+    }
+
+}
+
+/*面包按钮设置默认*/
+.nav .bread-btn {
+    width: 1.2rem;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav .bread-btn:hover .icon-menucaidan {
+    color: rgb(224, 224, 224);
+
+}
+
+@media(min-width:768px){
+    .nav .bread-btn{
+        display: none;
+    }
+}
+
+/*下拉菜单*/
+.drop {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.drop .drop-menu {
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.drop .drop-menu li {
+    color: var(--nav-text-color);
+    background-color: rgba(70, 70, 70, 0.7);
+    padding: 0.75rem 2.2rem;
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: var(--nav-menu-letter-spacing);
+    transition: all 0.3s ease-in-out;
+}
+
+.drop .drop-menu li:hover {
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.drop-show{
+    visibility: visible;
+    opacity: 1;
+}
+
+/*设置benner*/
+main .main_div{
+    display: flex;
+}
+
+main .main_div .banner{
+   
+    height: 96vh;
+}
+main .main_div img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  
+}
+/*背景遮罩*/
+.warp-mask {
+    position:absolute;
+    height:96vh;
+    width:100%;
+    background: rgba(14, 14, 14, 0.3);
+
+}
+/*介绍标题*/
+.introduce {
+    width: 50%;
+    top: 160px;
+    position:absolute;
+    margin-left: 20%;
+}
+
+.introduce h2{
+    font-size: 2.25vw;
+    color: rgb(255, 255, 255);
+    font-family: '马克笔';
+    font-weight: 1;
+}
+
+.content {
+    margin-top: 5%;
+    font-size: 1.25vw;
+    font-family: '幼圆';
+    color: #fff;
+    letter-spacing: var(--nav-menu-letter-spacing);
+    text-indent: 2em;
+}
+
+.music {
+    margin: auto;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+    user-select: none;
+}
+
+.music .column{
+    border-bottom: 1px solid #000;
+}
+
+.music .column h2{
+    width: 100%;
+    border-bottom: 2px #000;
+    font-size: 2rem;
+    font-family: '标题圆';
+    font-weight: 1;
+    letter-spacing: var(--nav-menu-letter-spacing);
+   
+}
+
+.music .work{
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.module {
+    flex: 0 0 30%;/*固定每行div数*/
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.card1 {
+    position:relative;
+    display: flex;
+    width: 19rem;
+    height: 28rem;
+    transition: 1s;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgb(39, 39, 39);/*阴影*/
+}
+
+.card1:hover {
+    cursor: pointer;
+    transform: scale(1.03,1.03);
+}
+
+.module img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card1 .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    /*filter: blur(10px);*/
+    
+}
+
+.card1 .title {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card1 .title a{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: '标题圆';
+    color: rgb(245, 245, 245);
+    text-shadow: 5px 3px 10px #000;
+}
+
+.module-lrc {
+    width: 360px;
+}
+
+.lrc-panel{
+    display: flex;
+    width: 330px;
+    height: 20rem;
+}
+
+.lrc{
+    font-size: 0.75rem;
+    text-align: center;
+    overflow:scroll;
+}
+
+
+@media (max-width: 1460px) {
+    .music {
+        margin: auto;
+        margin-top: 5%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+    
+    .music .column{
+        border-bottom: 1px solid #000;
+    }
+    
+    .music .column h2{
+        width: 100%;
+        border-bottom: 1px #000;
+        font-size: 1.25rem;
+        font-family: '标题圆';
+        font-weight: 1;
+        letter-spacing: var(--nav-menu-letter-spacing);
+       
+    }
+    
+    .music .work{
+        margin: auto;
+        margin-top: 1.5rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .module {
+        margin-top: 2%;
+       
+    }
+    
+    .card1 {
+        position:relative;
+        display: flex;
+        width: 80%;
+        height: 70%;
+        transition: 1s;
+        border-radius: 10px;
+    }
+    
+    .card1:hover {
+        cursor: pointer;
+        transform: scale(1.03,1.03);
+    }
+    
+    .module img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .card1 .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        filter: blur(5px);
+    }
+    
+    
+    .card1 .title {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    
+    .card1 .title a{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+        font-family: '标题圆';
+        color: rgb(245, 245, 245);
+    }
+}
+
+
+/*-------------------页脚部分------------------------*/
+.container2{
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background-color: rgb(29, 29, 29); 
+  
+}
+
+.footer-concent {
+    margin: auto;
+    display: flex;
+    align-items: center;
+   
+}
+
+.footer-concent p {
+    width: 50%;
+    font-size: 0.75rem;
+    color: #fff;
+    
+}
+
+
+.bilibili a{
+    margin-left: 90%;
+    font-size: 1.25rem;
+    color: rgb(0, 162, 255);
+}
+
+
+
+.e-mail {
+    display:flex;
+    margin-left: 80px;
+    font-size: 2rem;
+    color: rgb(250, 196, 49);
+    
+}
+
+.email-icon {
+    line-height: 100%;
+    font-size: large;
+}
+
+.e-mail .email-account {
+    margin: auto;
+    margin-left: 0.5rem;
+    font-size: 0.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#clock{
+    width: 60%;
+    margin-left: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: '马克笔';
+    color: rgb(255, 255, 255);
+}
+
+
+/*页脚响应式*/
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        margin: auto;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(29, 29, 29); 
+    }
+
+    .footer-concent {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content:center;  
+    }
+
+    .footer-concent p {
+        display: flex;  
+        font-size: 5px;
+        color: #fff;   
+    }
+
+    .bilibili a{
+        margin-left: 10%;
+        font-size: 1px;
+        color: rgb(0, 162, 255);
+    }
+
+    .e-mail {
+        display:flex;
+        margin-left: 8%;
+        font-size: 1.5rem;
+        color: rgb(250, 196, 49);
+    }
+
+    .e-mail .email-account {
+        display: none;
+    }
+
+    #clock{
+        display: none;
+    }
+}
