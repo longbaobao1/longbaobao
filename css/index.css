@@ -431,7 +431,7 @@ main .main_div img{
 }
 
 
-@media (max-width: 1460px) {
+@media (max-width: 800px) {
     .music {
         margin: auto;
         margin-top: 5%;
@@ -524,7 +524,29 @@ main .main_div img{
 
 
 
-
+@media (max-width: 800px) {
+    .tutorial {
+        margin: auto;
+        margin-top: 5%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+    
+    .tutorial .column{
+        border-bottom: 1px solid #000;
+    }
+    
+    .tutorial .column h2{
+        width: 100%;
+        border-bottom: 1px #000;
+        font-size: 1.25rem;
+        font-family: '标题圆';
+        font-weight: 1;
+        letter-spacing: var(--nav-menu-letter-spacing);
+       
+    }
+}
 
 
 /*-------------------页脚部分------------------------*/
